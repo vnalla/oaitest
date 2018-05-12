@@ -44,6 +44,13 @@ paths:
       operationId: createPets
       tags:
         - pets
+      requestBody:
+        description: "Add one or more Pet's to collection"
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pets'
+      
       responses:
         201:
           description: Null response
